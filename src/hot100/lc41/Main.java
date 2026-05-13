@@ -1,4 +1,4 @@
-package hot100.lc;
+package hot100.lc41;
 
 import java.io.BufferedReader;
 import java.io.IOException;
