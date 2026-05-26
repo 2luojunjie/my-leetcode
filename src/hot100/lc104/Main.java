@@ -22,6 +22,7 @@ class TreeNode{
     public TreeNode(int x){ this.val = x;}
 }
 public class Main {
+    //用队列，层序遍历
     private static int maxDepth(TreeNode root){
         if(root == null) return 0;
         Queue<TreeNode> q = new ArrayDeque<>();
@@ -37,6 +38,14 @@ public class Main {
             depth++;
         }
         return depth;
+    }
+
+    //递归
+    private static int maxDepth2(TreeNode root){
+        if(root == null ) return 0;
+        int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
+        return Math.max(leftDepth, rightDepth) + 1;
     }
 
     private static TreeNode buildTee(String[] vals){
