@@ -10,7 +10,7 @@ import java.util.LinkedList;
 /**
  * ClassName: Main
  * Package: hot100.lc101
- * Description:
+ * Description: 对称二叉树
  *
  * @Author: Luojunjie
  * @Create 2026/5/26 22:28
@@ -37,6 +37,7 @@ public class Main {
         }
     }
 
+    //递归
     private static boolean isSymmetric(TreeNode root) {
         if(root == null) return true;
         return compare(root.left, root.right);
